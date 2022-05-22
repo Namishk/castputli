@@ -37,7 +37,7 @@ function S1({ navigation }) {
 
 const Stack = createNativeStackNavigator();
 
-export default function App() {
+const App = () => {
 
   return (
     <NavigationContainer>
@@ -66,3 +66,5 @@ export default function App() {
   // );
 
 }
+
+export default App;

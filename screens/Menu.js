@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
         backgroundColor: "rgb(0, 100, 255)",
         minHeight: "25%",
         minWidth: "70%",
-        // borderRadius: "1rem",
+        borderRadius: "1rem",
         marginVertical: "1rem",
         display: "flex",
         justifyContent: "flex-end",
