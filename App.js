@@ -2,10 +2,16 @@ import React from 'react';
 import { enableScreens } from 'react-native-screens';
 enableScreens();
 
-import { ActivityIndicator, View, Text, Button, TextInput, StyleSheet, TouchableOpacity } from "react-native";
+import { ActivityIndicator, View, Text, Button, TextInput, StyleSheet, TouchableOpacity, ImageBackground, ScrollView } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import AppLoading from 'expo-app-loading';
+
+import {
+  useFonts,
+  FredokaOne_400Regular
+} from '@expo-google-fonts/fredoka-one'
 
 import LoginPage from "./screens/LoginPage";
 import Menu from "./screens/Menu";
@@ -39,10 +45,15 @@ function S1({ navigation }) {
 const Stack = createNativeStackNavigator();
 
 const App = () => {
-
+  let [fontsLoaded] = useFonts({
+    FredokaOne_400Regular,
+  });
+  if (!fontsLoaded) {
+    return <AppLoading />;
+  }
   return (
     <NavigationContainer>
-      <View style={{ flex: 1 }} collapsable={false}>
+      <View style={{ flex: 1, }} collapsable={false}>
         <Stack.Navigator>
           <Stack.Screen name="LoginPage" component={LoginPage} options={{ headerShown: false }} />
           <Stack.Screen name="Menu" component={Menu} options={{ headerShown: false }} />
