@@ -1,25 +1,10 @@
 import react, {useState} from "react";
 import { View, Text, Button, TextInput, StyleSheet, TouchableOpacity } from "react-native";
 
+import options from './../components/Menu/options'
 
 
 export default function Menu({navigation}){
-
-    const options = [
-        {
-            name: "Games",
-            redirect: "Games"
-        },
-        {
-            name : "AR Tutorials",
-            redirect: "AR"
-        },
-        {
-            name : "Competition",
-            redirect : "Competition"
-        }
-    ];
-
 
     return(
         <View style={styles.container}

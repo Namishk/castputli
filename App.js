@@ -8,10 +8,11 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import LoginPage from "./screens/LoginPage";
-import Menu from "./screens/Menu"
-import Games from "./screens/Games"
-import AR from "./screens/AR"
+import Menu from "./screens/Menu";
+import Games from "./screens/Games";
+import AR from "./screens/AR";
 import Competition from "./screens/Competition";
+import Quiz from './screens/Quiz';
 
 function HomeScreen({ navigation }) {
   return (
@@ -48,6 +49,7 @@ const App = () => {
           <Stack.Screen name="Games" component={Games} options={{ headerShown: false }} />
           <Stack.Screen name="Competition" component={Competition} options={{ headerShown: false }} />
           <Stack.Screen name="AR" component={AR} options={{ headerShown: false }} />
+          <Stack.Screen name="Quiz" component={Quiz} options={{ headerShown: false }} />
         </Stack.Navigator>
       </View>
 
